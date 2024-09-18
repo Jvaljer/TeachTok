@@ -1,0 +1,12 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LocalStrategy = exports.hooks = void 0;
+const hash_password_1 = __importDefault(require("./hooks/hash-password"));
+const protect_1 = __importDefault(require("./hooks/protect"));
+exports.hooks = { hashPassword: hash_password_1.default, protect: protect_1.default };
+var strategy_1 = require("./strategy");
+Object.defineProperty(exports, "LocalStrategy", { enumerable: true, get: function () { return strategy_1.LocalStrategy; } });
+//# sourceMappingURL=index.js.map
